@@ -1,0 +1,31 @@
+import java.util.*;
+public class AreaOfTriangle
+{
+	public static void main(String args[])
+	{
+		double area;
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the 3 sides of a triangle:");
+		int a=s.nextInt();
+		int b=s.nextInt();
+		int c=s.nextInt();
+		if((a==b)&&(b==c))
+		{
+			System.out.println("\n triangle is equilateral");
+			area = (Math.sqrt(3)/(4)*(a*a));
+			System.out.println("Area="+area);
+		}
+		else if((a==b||(b==c)||(c==a))
+		{
+			System.out.println("\nTriangle is isosceles:");
+			area=b/4*Math.sqrt((4*a*a)-(b*b));
+			System.out.println("Area="+area);
+		}
+		else
+		{
+			System.out.println("\nTriangle is Scalene");
+			area=(a*b)/2;
+			System.out.println("Area="+area);
+		}
+	}
+}
